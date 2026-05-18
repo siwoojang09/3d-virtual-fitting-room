@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "id": "top_001",
+      "name": "White T-Shirt",
+      "category": "top",
+      "model": "public/models/clothing/white_tshirt.glb",
+      "thumbnail": "public/textures/thumb_white_tshirt.png"
+    },
+    {
+      "id": "bottom_001",
+      "name": "Blue Jeans",
+      "category": "bottom",
+      "model": "public/models/clothing/blue_jeans.glb",
+      "thumbnail": "public/textures/thumb_blue_jeans.png"
+    },
+    {
+      "id": "outerwear_001",
+      "name": "Black Jacket",
+      "category": "outerwear",
+      "model": "public/models/clothing/black_jacket.glb",
+      "thumbnail": "public/textures/thumb_black_jacket.png"
+    }
+  ]
+}
