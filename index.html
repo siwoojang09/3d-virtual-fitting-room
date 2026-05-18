@@ -4,23 +4,113 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>3D Virtual Fitting Room</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="src/styles/main.css" />
 </head>
 <body>
   <div id="app">
-    <aside id="sidebar">
-      <h2>Fitting Room</h2>
-      <div id="avatar-controls">
-        <!-- Avatar customization controls -->
+
+    <!-- LEFT SIDEBAR: Avatar customization -->
+    <aside id="sidebar-left">
+      <div class="sidebar-header">
+        <span class="logo">👗 FitRoom</span>
       </div>
+
+      <section class="section">
+        <h3>Your Avatar</h3>
+        <div id="rpm-container">
+          <div id="avatar-preview-box">
+            <div class="avatar-placeholder">
+              <span>🧍</span>
+              <p>No avatar loaded</p>
+            </div>
+          </div>
+          <button id="btn-open-rpm" class="btn btn-primary">
+            Create Avatar with Ready Player Me
+          </button>
+          <p class="hint">or use a preset:</p>
+          <div class="preset-grid">
+            <button class="preset-btn" data-preset="male">Male</button>
+            <button class="preset-btn" data-preset="female">Female</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3>Body Measurements</h3>
+        <div class="slider-group">
+          <label>Height <span id="val-height">175</span> cm</label>
+          <input type="range" id="slider-height" min="150" max="200" value="175" />
+        </div>
+        <div class="slider-group">
+          <label>Weight <span id="val-weight">70</span> kg</label>
+          <input type="range" id="slider-weight" min="45" max="130" value="70" />
+        </div>
+        <div class="slider-group">
+          <label>Shoulder <span id="val-shoulder">42</span> cm</label>
+          <input type="range" id="slider-shoulder" min="30" max="60" value="42" />
+        </div>
+      </section>
+
+      <section class="section">
+        <h3>Outfit Summary</h3>
+        <div id="outfit-summary">
+          <p class="empty-msg">No items selected yet.</p>
+        </div>
+        <button id="btn-clear-outfit" class="btn btn-ghost">Clear Outfit</button>
+      </section>
+    </aside>
+
+    <!-- CENTER: 3D Viewer -->
+    <main id="viewer">
+      <div id="viewer-toolbar">
+        <button id="btn-reset-cam" title="Reset Camera">⟳ Reset View</button>
+        <button id="btn-toggle-bg" title="Toggle Background">🌓 Background</button>
+        <span id="viewer-hint">Drag to rotate · Scroll to zoom</span>
+      </div>
+      <canvas id="three-canvas"></canvas>
+      <div id="loading-overlay">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+      </div>
+    </main>
+
+    <!-- RIGHT SIDEBAR: Clothing catalog -->
+    <aside id="sidebar-right">
+      <div class="sidebar-header">
+        <h3>Clothing</h3>
+      </div>
+
+      <div id="category-tabs">
+        <button class="tab-btn active" data-cat="all">All</button>
+        <button class="tab-btn" data-cat="top">Tops</button>
+        <button class="tab-btn" data-cat="bottom">Bottoms</button>
+        <button class="tab-btn" data-cat="outerwear">Outerwear</button>
+        <button class="tab-btn" data-cat="shoes">Shoes</button>
+      </div>
+
       <div id="clothing-catalog">
-        <!-- Clothing items populated by JS -->
+        <!-- Populated by catalog.js -->
       </div>
     </aside>
-    <main id="viewer">
-      <canvas id="three-canvas"></canvas>
-    </main>
+
   </div>
+
+  <!-- Ready Player Me iframe (hidden by default) -->
+  <div id="rpm-modal" class="modal hidden">
+    <div class="modal-overlay" id="rpm-overlay"></div>
+    <div class="modal-box">
+      <button id="rpm-close" class="modal-close">✕</button>
+      <iframe id="rpm-iframe"
+        src="https://demo.readyplayer.me/avatar?frameApi"
+        allow="camera *; microphone *"
+        title="Ready Player Me Avatar Creator">
+      </iframe>
+    </div>
+  </div>
+
   <script type="module" src="src/main.js"></script>
 </body>
 </html>
