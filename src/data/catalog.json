@@ -4,22 +4,91 @@
       "id": "top_001",
       "name": "White T-Shirt",
       "category": "top",
-      "model": "public/models/clothing/white_tshirt.glb",
-      "thumbnail": "public/textures/thumb_white_tshirt.png"
+      "emoji": "👕",
+      "color": "#f0f0f0",
+      "model": null,
+      "thumbnail": null
+    },
+    {
+      "id": "top_002",
+      "name": "Black Hoodie",
+      "category": "top",
+      "emoji": "🖤",
+      "color": "#2a2a2a",
+      "model": null,
+      "thumbnail": null
+    },
+    {
+      "id": "top_003",
+      "name": "Striped Shirt",
+      "category": "top",
+      "emoji": "👔",
+      "color": "#4a7fff",
+      "model": null,
+      "thumbnail": null
     },
     {
       "id": "bottom_001",
       "name": "Blue Jeans",
       "category": "bottom",
-      "model": "public/models/clothing/blue_jeans.glb",
-      "thumbnail": "public/textures/thumb_blue_jeans.png"
+      "emoji": "👖",
+      "color": "#3a5a99",
+      "model": null,
+      "thumbnail": null
+    },
+    {
+      "id": "bottom_002",
+      "name": "Chino Pants",
+      "category": "bottom",
+      "emoji": "🟤",
+      "color": "#c8a06e",
+      "model": null,
+      "thumbnail": null
+    },
+    {
+      "id": "bottom_003",
+      "name": "Joggers",
+      "category": "bottom",
+      "emoji": "🩳",
+      "color": "#888",
+      "model": null,
+      "thumbnail": null
     },
     {
       "id": "outerwear_001",
       "name": "Black Jacket",
       "category": "outerwear",
-      "model": "public/models/clothing/black_jacket.glb",
-      "thumbnail": "public/textures/thumb_black_jacket.png"
+      "emoji": "🧥",
+      "color": "#1a1a1a",
+      "model": null,
+      "thumbnail": null
+    },
+    {
+      "id": "outerwear_002",
+      "name": "Trench Coat",
+      "category": "outerwear",
+      "emoji": "🧥",
+      "color": "#c8a06e",
+      "model": null,
+      "thumbnail": null
+    },
+    {
+      "id": "shoes_001",
+      "name": "White Sneakers",
+      "category": "shoes",
+      "emoji": "👟",
+      "color": "#fff",
+      "model": null,
+      "thumbnail": null
+    },
+    {
+      "id": "shoes_002",
+      "name": "Black Boots",
+      "category": "shoes",
+      "emoji": "👢",
+      "color": "#111",
+      "model": null,
+      "thumbnail": null
     }
   ]
 }
